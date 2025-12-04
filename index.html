@@ -2,258 +2,296 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Name | Research</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Google Font (구글 사이트와 유사한 느낌) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --green: #3D463A;
-            --light-green: #4A5447;
-            --white: #ffffff;
-            --max-width: 1400px;
-        }
-
         body {
             margin: 0;
-            padding: 0;
-            background: var(--white);
             font-family: "Inter", sans-serif;
-        }
-
-        /* NAVIGATION */
-        nav {
-            width: 100%;
-            background: var(--green);
-            color: var(--white);
-            padding: 20px 60px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-left {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        nav .brand {
-            font-family: "Playfair Display", serif;
-            font-size: 1.4rem;
-            letter-spacing: 1px;
-            margin-left: 200px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            margin-left: auto;
-            margin-right: 200px;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* HERO */
-        .hero {
-            background: var(--green);
-            color: var(--white);
-            text-align: center;
-            padding: 180px 20px 80px;
-            font-family: "Playfair Display", serif;
-        }
-
-        .hero h2 {
-            font-size: 1rem;
-            font-weight: 300;
-            opacity: 0.8;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 500;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            font-family: "Inter", sans-serif;
-            opacity: 0.9;
-            max-width: 500px;
-            margin: 20px auto;
-        }
-
-        /* FULL-WIDTH HERO IMAGE */
-        .hero-image img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-        }
-
-        /* 3 COLUMN SECTION */
-        .three-cards {
-            background: var(--light-green);
-            color: var(--white);
-            padding: 120px 40px;
-        }
-
-        .three-cards h2 {
-            text-align: center;
-            font-family: "Playfair Display", serif;
-            font-size: 2rem;
-            margin-bottom: 60px;
-        }
-
-        .card-wrapper {
-            display: flex;
-            justify-content: center;
-            max-width: var(--max-width);
-            margin: 0 auto;
-            gap: 60px;
-        }
-
-        .card {
-            width: 28%;
-            min-height: 180px;
-            text-align: center;
-        }
-
-        .card h3 {
-            font-family: "Playfair Display", serif;
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            font-size: 0.95rem;
-            opacity: 0.9;
+            background: #ffffff;
+            color: #222;
             line-height: 1.6;
         }
 
-        /* IMAGE LEFT / TEXT RIGHT SECTION */
-        .split-section {
-            display: flex;
-            max-width: var(--max-width);
-            margin: 140px auto;
-            gap: 40px;
-            padding: 0 40px;
-        }
-
-        .split-section img {
-            width: 45%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-
-        .split-text {
-            width: 55%;
-            font-family: "Playfair Display", serif;
-        }
-
-        .split-text h2 {
-            font-size: 2.4rem;
-            margin-bottom: 20px;
-            color: var(--green);
-        }
-
-        .split-text p {
-            font-family: "Inter", sans-serif;
+        /* NAVIGATION BAR */
+        .navbar {
+            width: 100%;
+            background: #2a2a2a;
+            color: white;
+            padding: 14px 40px;
             font-size: 1.1rem;
-            line-height: 1.7;
-            color: #333;
+            position: sticky;
+            top: 0;
         }
 
+        .navbar-title {
+            font-weight: 500;
+        }
+
+        /* MAIN LAYOUT WRAPPER */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-top: 60px;
+            margin-bottom: 25px;
+            color: #1d3a45;
+        }
+
+        /* --------------------------------------------- */
+        /* 연구 소개 섹션 (첫 번째 섹션)                 */
+        /* --------------------------------------------- */
+
+        .research-top {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .research-img {
+            width: 45%;
+            min-height: 260px;
+            background: #ddd;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+
+        .research-cards {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .research-card {
+            padding: 22px 25px;
+            background: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.06);
+        }
+
+        /* --------------------------------------------- */
+        /* 프로필 영역 (Hero Section)                    */
+        /* --------------------------------------------- */
+        .hero {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .hero-text h1 {
+            margin: 0;
+            font-size: 1.9rem;
+            font-weight: 600;
+        }
+
+        .links a {
+            color: #1d3a45;
+            text-decoration: none;
+            margin-right: 12px;
+            font-weight: 500;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* --------------------------------------------- */
+        /* PUBLICATION LIST STYLE                         */
+        /* --------------------------------------------- */
+        .pub-item {
+            margin-bottom: 15px;
+        }
+
+        .pub-item b {
+            font-weight: 600;
+        }
+
+        /* --------------------------------------------- */
+        /* WORK EXPERIENCE                                */
+        /* --------------------------------------------- */
+        .work-item {
+            margin-bottom: 25px;
+        }
+
+        .work-item i {
+            display: block;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* --------------------------------------------- */
+        /* EDUCATION (세로 리스트 + 로고)                 */
+        /* --------------------------------------------- */
+        .edu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .edu-logo {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        .edu-text .school {
+            font-weight: 600;
+        }
+
+        /* FOOTER */
         footer {
-            background: var(--green);
-            color: var(--white);
-            padding: 60px;
             text-align: center;
+            padding: 50px;
             margin-top: 80px;
+            background: #f2f2f2;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* MOBILE */
+        @media(max-width: 800px) {
+            .research-top, .hero {
+                flex-direction: column;
+            }
+            .research-img, .research-cards {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <div class="nav-left">
-            <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" width="18">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" width="18">
-        </div>
-
-        <div class="brand">YOUR NAME</div>
-
-        <div class="nav-links">
-            <a href="#">학력</a>
-            <a href="#">연구</a>
-            <a href="#">프로젝트</a>
-            <a href="#">수상</a>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-        <h2>YOUR CERTIFIED EXPERT IN</h2>
-        <h1>DATA SCIENCE & RESEARCH</h1>
-        <p>임상 데이터 분석, 시계열 모델링, 인과추론을 중심으로 AI 기반 의사결정 지원 연구를 수행합니다.</p>
-    </section>
-
-    <!-- HERO IMAGE -->
-    <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769" />
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <span class="navbar-title">YOUR NAME</span>
     </div>
 
-    <!-- 3-CARD SECTION -->
-    <section class="three-cards">
-        <h2>WHAT I DO</h2>
+    <!-- MAIN CONTENT -->
+    <div class="container">
 
-        <div class="card-wrapper">
-            <div class="card">
-                <h3>학력</h3>
-                <p>학부 → 석사 → 박사까지의 전공 분야 경험 요약</p>
-            </div>
+        <!-- ========================================== -->
+        <!-- 0. 새로운 연구 소개 섹션                     -->
+        <!-- ========================================== --
 
-            <div class="card">
-                <h3>연구 경력</h3>
-                <p>연구 프로젝트와 주요 성과 요약</p>
-            </div>
+        <!-- ========================================== -->
+        <!-- 1. 프로필(Hero Section)                      -->
+        <!-- ========================================== -->
+        <div class="hero">
+            <img src="profile.jpg" class="profile-img">
 
-            <div class="card">
-                <h3>프로젝트</h3>
-                <p>연구/개발 프로젝트 중심의 포트폴리오</p>
+            <div class="hero-text">
+                <h1>Your Name (이름)</h1>
+                <p>Ph.D. Student<br>Affiliation Here<br>email@example.com</p>
+
+                <div class="links">
+                    <a href="#">Google Scholar</a> /
+                    <a href="#">GitHub</a> /
+                    <a href="#">Twitter</a>
+                </div>
+
+                <p>
+                    Hello, this is placeholder text for your introduction.  
+                    You can replace this with your full introduction later.  
+                    This block follows the same structure as the reference Google Sites page.
+                </p>
             </div>
         </div>
-    </section>
 
-    <!-- IMAGE LEFT / TEXT RIGHT -->
-    <section class="split-section">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+        <div class="research-top">
+            <div class="research-img" style="background-image:url('research_fig.jpg');"></div>
 
-        <div class="split-text">
-            <h2>IMPROVING HEALTHCARE<br>THROUGH DATA</h2>
-            <p>
-                의료 데이터를 기반으로 환자 상태를 예측하고 최적 치료 전략을 도출하는 연구를 수행하고 있습니다.  
-                Inference, Causal Learning, RL-based treatment optimization 등 다양한 연구를 진행합니다.
-            </p>
+            <div class="research-cards">
+                <div class="research-card">Multivariate Time Series Modeling</div>
+                <div class="research-card">Domain Adaptation</div>
+                <div class="research-card">Irregular Time Series</div>
+            </div>
         </div>
-    </section>
+
+        <!-- ========================================== -->
+        <!-- 2. Publications                             -->
+        <!-- ========================================== -->
+        <div class="section-title">Publications</div>
+
+        <div class="pub-item">
+            <b>Sample Paper Title</b> Author1, Author2, Author3 [PDF]
+        </div>
+        <div class="pub-item">
+            <b>Another Paper Title</b> Author1, Author2, Author3 [PDF]
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 3. Work Experience                          -->
+        <!-- ========================================== -->
+        <div class="section-title">Work Experience</div>
+
+        <div class="work-item">
+            <b>Company, Location (2025 - Present)</b>
+            <i>Research Intern</i>
+            Role description goes here.
+        </div>
+
+        <div class="work-item">
+            <b>Company, Location (2024 - 2025)</b>
+            <i>Research Intern</i>
+            Another shorter description here.
+        </div>
+
+        <!-- ========================================== -->
+        <!-- 4. Education (로고 + 세로 리스트)             -->
+        <!-- ========================================== -->
+        <div class="section-title">Education</div>
+
+        <div class="edu-item">
+            <img src="school_logo" class="edu-logo">
+            <div class="edu-text">
+                <div class="school">Myongji University</div>
+                B.S. Degree (기간 입력)
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <img src="school_logo2" class="edu-logo">
+            <div class="edu-text">
+                <div class="school">Korea University</div>
+                M.S. Degree (기간 입력)
+            </div>
+        </div>
+
+        <div class="edu-item">
+            <img src="school_logo3" class="edu-logo">
+            <div class="edu-text">
+                <div class="school">Korea University</div>
+                Ph.D. Program (기간 입력)
+            </div>
+        </div>
+
+    </div>
 
     <!-- FOOTER -->
     <footer>
