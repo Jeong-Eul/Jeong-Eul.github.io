@@ -9,6 +9,7 @@
     
     <!-- Google Font (구글 사이트와 유사한 느낌) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         *, *::before, *::after {
@@ -36,7 +37,8 @@
         }
 
         .navbar-title {
-            font-weight: 500;
+            font-weight: 650;
+            font-family: "Bricolage Grotesque", "Noto Sans KR", sans-serif;
         }
 
         /* MAIN LAYOUT WRAPPER */
@@ -48,8 +50,9 @@
 
         /* SECTION TITLE */
         .section-title {
+            font-family: "Bricolage Grotesque", "Noto Sans KR", sans-serif;
             font-size: 1.7rem;
-            font-weight: 600;
+            font-weight: 800;
             margin-top: 60px;
             margin-bottom: 25px;
             color: #113a5e !important; /* 딥 블루 */
@@ -124,6 +127,7 @@
 
         .hero-text h1 {
             margin: 0;
+            font-family: "Bricolage Grotesque", "Noto Sans KR", sans-serif;
             font-size: 1.9rem;
             font-weight: 600;
         }
@@ -142,13 +146,6 @@
         /* --------------------------------------------- */
         /* PUBLICATION LIST STYLE                         */
         /* --------------------------------------------- */
-        .pub-item {
-            margin-bottom: 15px;
-        }
-
-        .pub-item b {
-            font-weight: 600;
-        }
 
         /* --------------------------------------------- */
         /* WORK EXPERIENCE                                */
@@ -211,11 +208,8 @@
         .research-photo { height: 190px; border-radius: 0; box-shadow: none; background-size: contain; background-repeat: no-repeat; background-color: #fff; }
         .research-photo:hover { transform: none; }
         .research-label { margin: 0; padding: 16px; font-size: 0.98rem; }
-        .pub-item { margin: 0; padding: 20px 0; border-bottom: 1px solid #e8edf1; line-height: 1.7; }
-        .pub-item:first-of-type { padding-top: 0; }
-        .pub-item b:first-child { color: #1e293b; }
-        .pub-item i { color: #527188; }
-        .pub-item a { display: inline-block; margin-left: 4px; padding: 0 7px; border-radius: 4px; background: #eaf2f7; font-size: 0.8rem; font-weight: 600; text-decoration: none; }
+        .research-feature { margin-bottom: 20px; }
+        .research-feature img { display: block; width: 100%; height: auto; background: #fff; }
         .work-item { margin-bottom: 16px; line-height: 1.9; }
         .date { color: #718096; font-weight: 400; white-space: nowrap; }
         .edu-item { gap: 16px; align-items: flex-start; margin-bottom: 22px; }
@@ -228,16 +222,31 @@
         .profile-img:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(17, 58, 94, 0.18); }
         .links a { display: inline-block; transition: color 0.2s ease, transform 0.2s ease; }
         .links a:hover, .links a:focus-visible { color: #0873a4; transform: translateY(-2px); }
-        .pub-item { border-radius: 6px; transition: background-color 0.2s ease, box-shadow 0.2s ease; }
-        .pub-item:hover, .pub-item:focus-within { background: #f7fafc; box-shadow: 8px 0 #f7fafc, -8px 0 #f7fafc; }
-        .pub-item a { transition: background-color 0.2s ease, color 0.2s ease; }
-        .pub-item a:hover, .pub-item a:focus-visible { background: #17577c; color: #fff; }
         .edu-logo { transition: transform 0.25s ease; }
         .edu-item:hover .edu-logo { transform: scale(1.08); }
         @media (prefers-reduced-motion: reduce) {
             .profile-img, .links a, .research-item, .pub-item, .pub-item a, .edu-logo { transition: none; }
             .profile-img:hover, .links a:hover, .links a:focus-visible, .research-item:hover, .edu-item:hover .edu-logo { transform: none; }
         }
+
+        /* Publications */
+        .publications { font-family: "Noto Sans KR", sans-serif; color: #3d5169; }
+        .publications .section-title { color: #0f2b46 !important; font-family: "Bricolage Grotesque", "Noto Sans KR", sans-serif; border: 0; }
+        .pub-list { border-top: 2px solid #0f2b46; }
+        .pub-item { position: relative; display: grid; grid-template-columns: 90px minmax(0, 1fr) auto; gap: 24px; align-items: start; padding: 26px 12px; border-bottom: 1px solid #dce2e8; overflow: hidden; background: #fff; transition: padding-left 0.3s, background-color 0.3s; }
+        .pub-item::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 0; background: #1d5ea8; transition: width 0.3s; }
+        .pub-item:hover, .pub-item:focus-within { padding-left: 34px; background: #eef2f7; }
+        .pub-item:hover::before, .pub-item:focus-within::before { width: 8px; }
+        .pub-venue { color: #0f2b46; font-size: 0.75rem; font-weight: 700; line-height: 1.4; overflow-wrap: anywhere; }
+        .pub-title { margin: 0; color: #0f2b46; font-family: "Bricolage Grotesque", "Noto Sans KR", sans-serif; font-size: 19px; font-weight: 700; line-height: 1.3; }
+        .pub-authors, .pub-collaboration { margin: 9px 0 0; font-size: 0.83rem; line-height: 1.5; }
+        .pub-authors strong { color: #0f2b46; font-weight: 700; }
+        .pub-collaboration { margin-top: 3px; }
+        .pub-link { display: inline-block; justify-self: end; padding: 8px 17px; border: 1.5px solid #cbd4de; border-radius: 99px; background: #fff; color: #0f2b46; font-size: 0.8rem; font-weight: 700; line-height: 1.3; text-decoration: none; transition: background-color 0.3s, border-color 0.3s, color 0.3s; }
+        .pub-link:hover { background: #ff4b3e; border-color: #ff4b3e; color: #fff; }
+        .pub-link:focus-visible { outline: 3px solid #0f2b46; outline-offset: 3px; }
+        @media (max-width: 900px) { .pub-item { grid-template-columns: minmax(0, 1fr); gap: 12px; } .pub-link { justify-self: start; } }
+        @media (prefers-reduced-motion: reduce) { .pub-item, .pub-item::before, .pub-link { transition: none; } }
 
         /* MOBILE */
         @media(max-width: 800px) {
@@ -287,7 +296,7 @@
                 <div class="links">
                     <a href="https://scholar.google.com/citations?user=bq1IAP4AAAAJ&hl=en">Google Scholar</a>/
                     <a href="https://github.com/Jeong-Eul">GitHub</a>/
-                    <a href="https://datascience0321.tistory.com/">Blog</a>
+                    <a href="https://www.linkedin.com/in/jeong-eul-kwon-34a604317">LinkedIn</a>
                 </div>
 
                 <p>
@@ -302,18 +311,21 @@
         <div class="section-title">My works</div>
         <div class="research-top">
 
+            <div class="research-item research-feature">
+                <img src="early_alarm_animation.gif" alt="Illustration of risk over time">
+                <div class="research-label">Counterfactual risk estimation</div>
+            </div>
+
             <div class="research-grid">
 
                 <div class="research-item">
                     <div class="research-photo" style="background-image:url('causal_ml.png');"></div>
                     <div class="research-label">Causal machine learning</div>
                 </div>
-
                 <div class="research-item">
                     <div class="research-photo" style="background-image:url('domain_adaptation.png');"></div>
                     <div class="research-label">Irregularly sampled time series</div>
                 </div>
-
                 <div class="research-item">
                     <div class="research-photo" style="background-image:url('ts_modeling.png');"></div>
                     <div class="research-label">Representation learning</div>
@@ -326,41 +338,54 @@
         <!-- ========================================== -->
         <!-- 2. Publications                             -->
         <!-- ========================================== -->
-        <div class="section-title">Publications</div>
-
-        <div class="pub-item">
-            <b>From Hemodynamic Stability to Survival: A Validated Multi-Agent Reinforcement Learning Framework for ICU Shock Management with Machine-in-the-loop System</b> <br>   
-            Jong Hoon Kim, <b>Jeong Eul Kwon</b>, Jeuen Kim, Hyo Kyung Lee*, and Joo Heung Yoon*<br>
-            Collaborated with UPMC<br>
-            <i>Submitted</i>   
-        </div>
-
-        <div class="pub-item">
-            <b>Effectiveness of Wrist-Worn Wearable-Guided Cardiac Rehabilitation Delivered Through Fully Remote or Hybrid Programs in Patients With Cardiovascular Disease: Systematic Review and Meta-Analysis of Randomized Controlled Trials</b> <a href="https://pubmed.ncbi.nlm.nih.gov/42945529/">[PDF]</a><br>   
-            Jun Hwan Choi, So Young Lee, Kyung Cheon Seo, Sang Yoon Lee, Hyo Kyung Lee, Hyun Ryu, Dongbin Heo, Jong Hoon Kim, <b>Jeong Eul Kwon</b>, Bo Ryun Kim*, Michael Y. Lee*<br>
-            Collaborated with KUMC<br>
-            <i>JMIR Mhealth and Uhealth</i>   
-        </div>
-        
-        <div class="pub-item">
-            <b>Mind the Missing: Variable-Aware Representation Learning for Irregular EHR Time Series using Large Language Models</b> <a href="https://arxiv.org/abs/2509.22121">[PDF]</a><br>   
-            <b>Jeong Eul Kwon</b>, Joo Heung Yoon, and Hyo Kyung Lee*<br>
-            Collaborated with UPMC<br>
-            <i>Submitted</i>   
-        </div>
-
-        <div class="pub-item">
-            <b>CLEAR-Shock: Contrastive LEARning for Shock</b> <a href="https://ieeexplore.ieee.org/abstract/document/10834563">[PDF]</a><br>  
-            <b>Jeong Eul Kwon</b>, Sung Woo Lee, Su Jin Kim, Kap Su Han, Sijin Lee, Juhyun Song, and Hyo Kyung Lee*<br>
-            Collaborated with KUMC<br>
-            <i>IEEE Journal of Biomedical and Health Informatics</i>
-        </div>
-
-        <div class="pub-item">
-            <b>Sequential anomaly detection for continuous prediction of unexpected ICU admission from emergency department</b> <a href="https://ieeexplore.ieee.org/document/10594807">[PDF]</a><br>  
-            Sooho Choi, Gyumin Kim, <b>Jeong Eul Kwon</b>, and Hyo Kyung Lee*<br> 
-            <i>IEEE Access</i>
-        </div>
+        <section class="publications" aria-labelledby="publications-title">
+            <h2 class="section-title" id="publications-title">Publications</h2>
+            <div class="pub-list">
+                <article class="pub-item">
+                    <div class="pub-venue">Submitted</div>
+                    <div>
+                        <h3 class="pub-title">From Hemodynamic Stability to Survival: A Validated Multi-Agent Reinforcement Learning Framework for ICU Shock Management with Machine-in-the-loop System</h3>
+                        <p class="pub-authors">Jong Hoon Kim, <strong>Jeong Eul Kwon</strong>, Jeuen Kim, Hyo Kyung Lee*, and Joo Heung Yoon*</p>
+                        <p class="pub-collaboration">Collaborated with UPMC</p>
+                    </div>
+                </article>
+                <article class="pub-item">
+                    <div class="pub-venue">JMIR Mhealth and Uhealth</div>
+                    <div>
+                        <h3 class="pub-title">Effectiveness of Wrist-Worn Wearable-Guided Cardiac Rehabilitation Delivered Through Fully Remote or Hybrid Programs in Patients With Cardiovascular Disease: Systematic Review and Meta-Analysis of Randomized Controlled Trials</h3>
+                        <p class="pub-authors">Jun Hwan Choi, So Young Lee, Kyung Cheon Seo, Sang Yoon Lee, Hyo Kyung Lee, Hyun Ryu, Dongbin Heo, Jong Hoon Kim, <strong>Jeong Eul Kwon</strong>, Bo Ryun Kim*, Michael Y. Lee*</p>
+                        <p class="pub-collaboration">Collaborated with KUMC</p>
+                    </div>
+                    <a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/42945529/" aria-label="View Effectiveness of Wrist-Worn Wearable-Guided Cardiac Rehabilitation">PDF</a>
+                </article>
+                <article class="pub-item">
+                    <div class="pub-venue">Submitted</div>
+                    <div>
+                        <h3 class="pub-title">Mind the Missing: Variable-Aware Representation Learning for Irregular EHR Time Series using Large Language Models</h3>
+                        <p class="pub-authors"><strong>Jeong Eul Kwon</strong>, Joo Heung Yoon, and Hyo Kyung Lee*</p>
+                        <p class="pub-collaboration">Collaborated with UPMC</p>
+                    </div>
+                    <a class="pub-link" href="https://arxiv.org/abs/2509.22121" aria-label="View Mind the Missing">PDF</a>
+                </article>
+                <article class="pub-item">
+                    <div class="pub-venue">IEEE JBHI</div>
+                    <div>
+                        <h3 class="pub-title">CLEAR-Shock: Contrastive LEARning for Shock</h3>
+                        <p class="pub-authors"><strong>Jeong Eul Kwon</strong>, Sung Woo Lee, Su Jin Kim, Kap Su Han, Sijin Lee, Juhyun Song, and Hyo Kyung Lee*</p>
+                        <p class="pub-collaboration">Collaborated with KUMC</p>
+                    </div>
+                    <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/10834563" aria-label="View CLEAR-Shock">PDF</a>
+                </article>
+                <article class="pub-item">
+                    <div class="pub-venue">IEEE Access</div>
+                    <div>
+                        <h3 class="pub-title">Sequential anomaly detection for continuous prediction of unexpected ICU admission from emergency department</h3>
+                        <p class="pub-authors">Sooho Choi, Gyumin Kim, <strong>Jeong Eul Kwon</strong>, and Hyo Kyung Lee*</p>
+                    </div>
+                    <a class="pub-link" href="https://ieeexplore.ieee.org/document/10594807" aria-label="View Sequential anomaly detection">PDF</a>
+                </article>
+            </div>
+        </section>
 
         <!-- ========================================== -->
         <!-- 3. Work Experience                          -->
@@ -374,9 +399,9 @@
         <div class="section-title">Awards and Honors</div>
 
         <div class="work-item">
-            <b>우수논문상 at Korea University</b> <span class="date">(2025.08)</span><br>
-            <b>대한의료정보학회 학술상 at <a href="https://www.kosmi.org/bbs/board.php?bo_table=sub6_2_4&sca=2023%EB%85%84%EB%8F%84">KOSMI</a></b> <span class="date">(2023.12)</span><br>
-            <b>빅콘테스트 데이터분석분야 퓨처스부문 우수상 at <a href="https://www.youtube.com/watch?v=XwjPwGqD09w">제 10회 2022 빅콘테스트</a></b> <span class="date">(2022.12)</span>
+            <b>우수논문상, Korea University</b> <span class="date">(2025.08)</span><br>
+            <b>대한의료정보학회 학술상, <a href="https://www.kosmi.org/bbs/board.php?bo_table=sub6_2_4&sca=2023%EB%85%84%EB%8F%84">KOSMI</a></b> <span class="date">(2023.12)</span><br>
+            <b>빅콘테스트 데이터분석분야 퓨처스부문 우수상, <a href="https://www.youtube.com/watch?v=XwjPwGqD09w">제 10회 2022 빅콘테스트</a></b> <span class="date">(2022.12)</span>
         </div>
 
         <!-- ========================================== -->
